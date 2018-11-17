@@ -636,12 +636,12 @@ client.on('message' , message => {
 
   client.on('message', async message => {
   if(message.content.startsWith(prefix + "طلب")) {
-    await message.channel.send("**:thinking:طلبك؟**").then(e => {
+    await message.channel.send("**وي اكتب بسرعة :thinking:طلبك؟**").then(e => {
     let filter = m => m.author.id === message.author.id
     let lan = '';
     let md = '';
     let br = '';
-    let chaLan = message.channel.awaitMessages(filter, { max: 1, time: 1, errors: ['time'] })
+    let chaLan = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
     .then(collected => {
       lan = collected.first().content
       collected.first().delete()
