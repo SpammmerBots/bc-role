@@ -674,11 +674,12 @@ var gg = message.guild.channels.find('name', 'orders')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
-.setDescription(`**  اسمك :question:  : \n ${lan}\nكم تقدر تدفع :link: :\n ${md} \n طلبك :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
+.setDescription(`**  اسمك :question:  : \n ${lan}\nكم تقدر تدفع :link: :\n ${md} \n طلبك :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}>\n ${lan}  \nاكتب اشطا عشات يتعمل الطلب **`)  
           .setFooter(`ادارة السيرفر`)
 .setTimestamp()
 });
 }        
+})
 })
 })
 })
