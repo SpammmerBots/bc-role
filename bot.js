@@ -636,7 +636,7 @@ client.on('message' , message => {
 
   client.on('message', async message => {
   if(message.content.startsWith(prefix + "طلب")) {
-    await message.channel.send("**اسمك**").then(e => {
+    await message.channel.send("**:thinking:طلبك؟**").then(e => {
     let filter = m => m.author.id === message.author.id
     let lan = '';
     let md = '';
@@ -646,19 +646,13 @@ client.on('message' , message => {
       lan = collected.first().content
       collected.first().delete()
 e.delete();
-     message.channel.send('**كم تقدر تدفع**').then(m => {
+     message.channel.send('**ماشي اعمل تيكيت بعد ما تكتب انت عايزه**').then(m => {
 let chaMd = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
 .then(co => {
   md = co.first().content
         co.first().delete()
         m.delete();
-message.channel.send('**تريد رابط اي ؟ **').then(m => {
-let chaMd = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
-.then(co => {
-  md = co.first().content
-        co.first().delete()
-        m.delete();
-message.channel.send('**اكتب اشطا عشات يتعمل الطلب **').then(ms => {
+message.channel.send('**وا خيراً نو طلبك عن اي ؟ **').then(ms => {
 let br = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
 .then(col => {
   br = col.first().content
@@ -666,20 +660,19 @@ let br = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['
 
 ms.delete()
 
- message.channel.send(' ثاثية 1..').then(b => {
+ message.channel.send('تم ارسال طلبك لاداره ..').then(b => {
         setTimeout(() => {
-  b.edit(`**تم التقديم  انتظر الرد  في تكيت **`)
+  b.edit(`** اعمل تكيت وي الاداره  هترد عليك في اقرب وقت**`)
         },2000);
 var gg = message.guild.channels.find('name', 'orders')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
-.setDescription(`**  اسمك :question:  : \n ${lan}\nكم تقدر تدفع :link: :\n ${md} \n طلبك :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}>\n ${lan}  \nاكتب اشطا عشات يتعمل الطلب **`)  
+.setDescription(`**  اسمك :question:  : \n ${lan}\nكم تقدر تدفع :link: :\n ${md} \n طلبك :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
           .setFooter(`ادارة السيرفر`)
 .setTimestamp()
 });
 }        
-})
 })
 })
 })
