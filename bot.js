@@ -634,55 +634,7 @@ client.on('message' , message => {
     });
 
 
- client.on('message', async dream => {
-  if(dream.content.startsWith(prefix + "عرض")) {
-    await dream.channel.send("**نوع العرض**").then(e => {
-    let filter = m => m.author.id === dream.author.id
-    let lan = '';
-    let md = '';
-    let br = '';
-    let chaLan = dream.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
-    .then(collected => {
-      lan = collected.first().content
-      collected.first().delete()
-e.delete();
-     dream.channel.send('**مدة العرض**').then(m => {
-let chaMd = dream.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
-.then(co => {
-  md = co.first().content
-        co.first().delete()
-        m.delete();
-dream.channel.send('**سعره**').then(ms => {
-let br = dream.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
-.then(col => {
-  br = col.first().content
-        col.first().delete()
-
-ms.delete()
-
- dream.channel.send('***جاري التقديم ..***').then(b => {
-        setTimeout(() => {
-  b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت**`)
-        },2000);
-var gg = dream.guild.channels.find('name','log')
-if(!gg) return;
-if(gg) {
-gg.send({embed : new Discord.RichEmbed()
-.setDescription(`**  نوع العرض :question:  : \n ${lan}\nمدة العرض :link: :\n ${md} \n السعر :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
-          .setFooter(`ادارة السيرفر`)
-.setTimestamp()
-});
-}        
-})
-})
-})
-})
-})
-})
-})
- }
-})
-
+ 
 
 
 
