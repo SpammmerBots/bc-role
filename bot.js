@@ -635,7 +635,7 @@ client.on('message' , message => {
 
 
   client.on('message', async message => {
-  if(message.content.startsWith(prefix + "طلب")) {
+  if(message.content.startsWith(prefix + "طلب"|| prefix + "tlb")) {
     await message.channel.send("**:thinking:طلبك؟**").then(e => {
     let filter = m => m.author.id === message.author.id
     let lan = '';
