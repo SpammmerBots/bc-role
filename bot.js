@@ -636,7 +636,7 @@ client.on('message' , message => {
 
   client.on('message', async message => {
   if(message.content.startsWith(prefix + "طلب")) {
-    await message.channel.send("**وي اكتب بسرعة :thinking:طلبك؟**").then(e => {
+    await message.channel.send("**:thinking:طلبك؟**").then(e => {
     let filter = m => m.author.id === message.author.id
     let lan = '';
     let md = '';
@@ -669,6 +669,55 @@ if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
 .setDescription(`** الطلب:pencil: \n ${lan}\nعامل التكيت او لا:incoming_envelope:\n ${md} \nالطلب عن:paperclips:\n ${br}  \nتم التقديم بواسطة:champagne_glass: <@${message.author.id}> **`)  
+          .setFooter(`MaL,Team`)
+.setTimestamp()
+});
+}        
+})
+})
+})
+})
+})
+})
+})
+ }
+})
+/////////////////4ريبورت
+client.on('message', async message => {
+  if(message.content.startsWith(prefix + "ريبورت")) {
+    await message.channel.send("** نوع الريبورت**").then(e => {
+    let filter = m => m.author.id === message.author.id
+    let lan = '';
+    let md = '';
+    let br = '';
+    let chaLan = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
+    .then(collected => {
+      lan = collected.first().content
+      collected.first().delete()
+e.delete();
+     message.channel.send('**هات لينك صوره**').then(m => {
+let chaMd = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
+.then(co => {
+  md = co.first().content
+        co.first().delete()
+        m.delete();
+message.channel.send('**اعمل منشن لشخص التبي له ريبورت**').then(ms => {
+let br = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
+.then(col => {
+  br = col.first().content
+        col.first().delete()
+
+ms.delete()
+
+ message.channel.send('**تم ارسال الربورت الي الاداره **').then(b => {
+        setTimeout(() => {
+  b.edit(`**شكراَ لك**`)
+        },2000);
+var gg = message.guild.channels.find('name', 'tlbatadmin')
+if(!gg) return;
+if(gg) {
+gg.send({embed : new Discord.RichEmbed()
+.setDescription(`**الربورت عن \n ${lan}\nالدليل\n ${md} \nالشخص التعمل له الريبورت\n ${br}  \nتم الارسال عبر:champagne_glass: <@${message.author.id}> **`)  
           .setFooter(`MaL,Team`)
 .setTimestamp()
 });
