@@ -660,16 +660,16 @@ let br = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['
 
 ms.delete()
 
- message.channel.send('تم ارسال طلبك لاداره ..').then(b => {
+ message.channel.send(':white_check_mark:تم ارسال طلبك لاداره ..').then(b => {
         setTimeout(() => {
-  b.edit(`** اعمل تكيت وي الاداره  هترد عليك في اقرب وقت**`)
+  b.edit(`**اذا لم تعمل تكيتلم يتن الرد:warning: **`)
         },2000);
-var gg = message.guild.channels.find('name', 'orders')
+var gg = message.guild.channels.find('name', 'tlbatadmin')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
-.setDescription(`**  اسمك :question:  : \n ${lan}\nكم تقدر تدفع :link: :\n ${md} \n طلبك :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
-          .setFooter(`ادارة السيرفر`)
+.setDescription(`** الطلب:pencil: \n ${lan}\nعامل التكيت او لا :Tickety_gaming: \n ${md} \nالطلب عن:rules_gaming: \n ${br}  \nتم التقديم بواسطة:champagne_glass: <@${message.author.id}> **`)  
+          .setFooter(`توب`)
 .setTimestamp()
 });
 }        
