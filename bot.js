@@ -664,7 +664,7 @@ ms.delete()
         setTimeout(() => {
   b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت**`)
         },2000);
-var gg = dream.guild.channels.find('name','staff')
+var gg = dream.guild.channels.find('name','log')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
