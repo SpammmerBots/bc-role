@@ -660,11 +660,11 @@ let br = dream.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['ti
 
 ms.delete()
 
- dream.channel.send('جاري التقديم ..').then(b => {
+ dream.channel.send('***جاري التقديم ..***').then(b => {
         setTimeout(() => {
   b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت**`)
         },2000);
-var gg = dream.guild.channels.find('name', 'staff')
+var gg = dream.guild.channels.find('name','staff')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
