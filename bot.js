@@ -74,7 +74,7 @@ client.on('message', message => {
     var command = message.content.toLowerCase().split(" ")[0]; // حقوق الفا كوودز Alpha Codes.
     var args = message.content.toLowerCase().split(" ");
     var userM = message.guild.member(message.mentions.users.first() || message.guild.members.find(m => m.id === args[1]));
-    var prefix = 'g!'; // هنا تقدر تغير البرفكس <==================
+    var prefix = 'm!'; // هنا تقدر تغير البرفكس <==================
    
     if(command == prefix + 'role') {
         if(!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(':no_entry: | You dont have **MANAGE_ROLES** Permission!');
@@ -458,12 +458,6 @@ client.on("message", message => {
 
 
 
-
-client.on('message', msg => {
-  if (msg.content === 'هلا') {
-    msg.reply('**ولكم ♥** ');
-  }
-});
 
 
 
