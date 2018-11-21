@@ -754,7 +754,7 @@ client.on('guildMemberAdd', member => {
     const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
     const stewart = member.guild.channels.find("name", "chat");
-     stewart.send(`<@${member.user.id}>**Invite By**:<@${inviter.id}>`);
+     stewart.send(`<@${member.user.id}>**Invite By**:<@${inviter.id}>:champagne_glass:`);
    //  stewart.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
   }); 
 });
@@ -781,7 +781,7 @@ client.on('guildMemberAdd', member => {
     const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
     const logChannel = member.guild.channels.find(channel => channel.name === "chat");  
-    logChannel.send(`Invited by: <@${inviter.tag}>`);
+    logChannel.send(`<#512738168257118224>`);
   });
 });
 
