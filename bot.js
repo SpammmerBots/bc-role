@@ -792,7 +792,7 @@ client.on('guildMemberAdd', member => {
 
 
 client.on('ready', function(){    
-    var ms = 400 ;    
+    var ms = 40000 ;    
     var setGame = [`Mal Team`,"Mal"];    
     var i = -1;    
     var j = 0;    
