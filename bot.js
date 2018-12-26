@@ -3,8 +3,8 @@ const tpoints = {};
 const vpoints = {};
 const prefix = 'm!';
 const client = new Discord.Client();
-aaa
-client.on('ready', () => {
+
+lient.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
  client.user.setActivity("",{type: 'watching'})
   console.log('')
